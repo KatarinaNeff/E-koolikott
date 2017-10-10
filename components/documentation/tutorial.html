@@ -1,0 +1,181 @@
+Installing Node.js
+Download from: https://nodejs.org/en/download/
+Test: Run node -v. The version should be higher than v0.10.32.
+
+Update
+npm install npm@latest -g
+Test: Run npm -v. The version should be higher than 2.1.8.
+
+Installing Protractor
+npm install -g protractor
+
+Webdriver 
+webdriver-manager update
+webdriver-manager start
+
+in Node.js command prompt put project path (f.e cd tests_in_js -> cd ProjectName)
+Run the test
+protractor conf.js
+
+Protractor in Eclipse
+1.Eclipse market place > Search for AngularJS Eclipse > Install AngularJS Eclipse 1.X.X
+2.Create Java Script Project
+3.Convert Java Script Project to Tern Project (Right click on project -> Configure > Convert to Tern Project) 
+4.A new modal window will appear > Select Jasmine and Protractor check box > Apply
+
+
+Some packages:   
+Faker
+npm install faker -g
+
+    Name
+        firstName
+        firstNameFemale
+        firstNameMale
+        lastName
+        findName
+    Address
+        zipCode
+        zipCodeFormat
+        city
+        streetName
+        streetAddress
+        secondaryAddress
+        brState
+        ukCounty
+        ukCountry
+        usState
+        latitude
+        longitude
+    PhoneNumber
+        phoneNumber
+        phoneNumberFormat
+    Internet
+        email
+        userName
+        domainName
+        domainWord
+        ip
+        color
+    Company
+        suffixes
+        companyName
+        companySuffix
+        catchPhrase
+        bs
+    Image
+        avatar
+        imageUrl
+        abstractImage
+        animals
+        business
+        cats
+        city
+        food
+        nightlife
+        fashion
+        people
+        nature
+        sports
+        technics
+        transport
+    Lorem
+        words
+        sentence
+        sentences
+        paragraph
+        paragraphs
+    Helpers
+        randomNumber
+        randomize
+        slugify
+        replaceSymbolWithNumber
+        shuffle
+        createCard
+        userCard
+    Tree
+        clone
+        createTree
+    Date
+        past
+        future
+        between
+        recent
+    random
+        number
+        array_element
+        city_prefix
+        city_suffix
+        street_suffix
+        br_state
+        br_state_abbr
+        us_state
+        us_state_abbr
+        uk_county
+        uk_country
+        first_name
+        last_name
+        name_prefix
+        name_suffix
+        catch_phrase_adjective
+        catch_phrase_descriptor
+        catch_phrase_noun
+        bs_adjective
+        bs_buzz
+        bs_noun
+        phone_formats
+        domain_suffix
+        avatar_uri
+    definitions
+        first_name
+        last_name
+        name_prefix
+        name_suffix
+        br_state
+        br_state_abbr
+        us_state
+        us_state_abbr
+        city_prefix
+        city_suffix
+        street_suffix
+        uk_county
+        uk_country
+        catch_phrase_adjective
+        catch_phrase_descriptor
+        catch_phrase_noun
+        bs_adjective
+        bs_buzz
+        bs_noun
+        domain_suffix
+        lorem
+        phone_formats
+        avatar_uri
+
+Helpers
+npm install --save-dev protractor-helpers 
+var helpers = require('protractor-helpers');
+https://github.com/wix/protractor-helpers
+
+Random js
+npm install random-js
+
+In your code:
+
+var random = require("random-js")(); // uses the nativeMath engine
+var value = random.integer(1, 100);
+
+Or to have more control:
+
+var Random = require("random-js");
+var random = new Random(Random.engines.mt19937().autoSeed());
+var value = random.integer(1, 100);
+
+It is recommended to create one shared engine and/or Random instance per-process rather than one per file.
+
+/*select data from arrey - currently not in use*/
+	var title = element(by.css('#add-portfolio-title-input'));
+	var myTitles = ['Bones', 'Psych', 'Big Bang Theory', 'Mad Men', 
+	               'Breaking Bad', 'Modern Family', 'Game of Thrones', 'Dexter'];
+	var titlesRandom = myTitles[Math.floor(Math.random() * myTitles.length)];
+	
+	title.sendKeys(titlesRandom);*/
