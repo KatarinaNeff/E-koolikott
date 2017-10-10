@@ -2,22 +2,27 @@
         seleniumAddress: 'http://localhost:4444/wd/hub',
         capabilities: {
             'browserName': 'chrome',
-            'chromeOptions': {'args': ['--disable-extensions --disable-web-security --disk-cache-size=1 --media-cache-size=1']}
+            //'chromeOptions': {
+               // 'args': ['show-fps-counter=true']
+             // }
         },
         framework: 'jasmine',
-        directConnect: true, 
-        //specs: ['./tests/login_tests.js', './tests/log_in.js'],
-        specs: ['./tests/login_tests.js'],
+        directConnect: true, // applies only to chrome and firefox.
+        //specs: ['./tests/login_tests.js', './tests/publishe_tests.js'],
+        specs: ['./tests/publisher_tests.js'],
         jasmineNodeOpts: {
-            defaultTimeoutInterval: 30000
+            defaultTimeoutInterval: 30000,
+            showColors: true
         },
         onPrepare: function () {
-            browser.manage().window().setSize(1600, 1024);
-            //browser.manage().window().setSize(1920, 1080);
-            browser.manage().timeouts().implicitlyWait(10000);
+            browser.manage().window().setSize(1000, 1024);
         }
+  
+            
     };
     
-    //How to run?
-    //webdriver-manager start
-    //protractor config.js
+    /*How to run?
+    protractor config.js */
+    
+   
+    
